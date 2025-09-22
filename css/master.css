@@ -1,0 +1,352 @@
+:root {
+    --main-color: #ff9800;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+/* Landing Page */
+.landing-page {
+    min-height: 100vh;
+    background-image: url('../imgs/image3.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page .overlay {
+    background-color: #00000060;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.header-area {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-area .links {
+    text-align: right;
+    width: 100%;    
+    list-style: none;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.header-area .logo {
+    width: 40%;
+    padding: 15px;
+}
+
+.header-area .links li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.header-area .links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-area .links li a:hover,
+.header-area .links li a.active {
+    color: var(--main-color);
+}
+
+.introduction-text {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.introduction-text h1 span {
+   color: var(--main-color);
+}
+
+.introduction-text p {
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+/* Settings */
+.setting-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    z-index: 1000;
+    width: 200px;
+    min-height: 100vh;
+    transition: 0.3s;
+    background-color: white;
+}
+.setting-box .toggle-settings{
+    position: absolute;
+    right: -35px;
+    top: 100px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+}
+.setting-box.open{
+    left: 0;
+}
+
+.setting-box .option-box{
+padding: 5px;
+padding-top: 10px;
+background-color: #EEE;
+width: 90%;
+margin:0 auto;
+margin-top: 15px;
+}
+
+.setting-box .option-box h4{
+    margin: 0;
+    color: #666;
+    text-align: center;
+}
+
+.setting-box .option-box .color-list{
+    list-style: none;
+    text-align: center;
+    padding: 0 ;
+}
+
+.setting-box .option-box .color-list li {
+    height: 20px;
+    width: 20px;
+    background-color: #dbd7d7;
+    border-radius: 50%;
+    opacity: 0.3;   /* dimmed by default */
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid transparent;
+     box-sizing: border-box;   
+}
+
+.setting-box .option-box .color-list li.active {
+    opacity: 1;     /* full visibility when active */
+    border: 2px solid white;
+    height: 23px;
+    width: 23px;
+}
+.setting-box .option-box .color-list li:first-child {
+    background-color: var(--main-color);
+}
+
+.setting-box .option-box .color-list li:nth-child(2) {
+    background-color: #FF5722;
+}
+
+.setting-box .option-box .color-list li:nth-child(3) {
+    background-color: #009688;
+}
+
+.setting-box .option-box .color-list li:nth-child(4) {
+    background-color: #03A9F4;
+}
+
+.setting-box .option-box .color-list li:nth-child(5) {
+    background-color: #4CAF50;
+}
+
+.option-box h4{
+    font-size: 14px;
+}
+
+.option-box .random{
+    text-align: center;
+}
+
+
+.option-box .random .yes,
+.option-box .random .no{
+    color: #FFF;
+    margin-top: 10px;
+    background-color: #333;
+    width: 50px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: 0.5;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.option-box .random span.active{
+    opacity: 1;
+}
+
+
+/*
+Start About us
+*/
+
+
+.container{
+   width: 90%;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: auto; 
+}
+
+.about-us{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 50%   ;
+}
+
+.about-us .info-box{
+    flex: 1;
+}
+
+.about-us .info-box h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+
+.about-us .info-box p {
+    line-height: 1.8;
+    color: #767676;
+    width:150%;
+}
+
+
+.about-us .imgs-about{
+width: 250px;
+}
+
+.about-us .image-box{
+    flex: 1;
+}
+
+
+/*
+end About us
+*/
+
+/* Skills */
+.skills{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+
+.skills h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+}
+
+.skills .skill-box{
+    background-color: #FFF;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.skills .skill-box .skill-name {
+    font-weight: bold;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.skills .skill-box .skill-progress {
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.skills .skill-box .skill-progress span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.3s;
+}
+
+
+
+
+/* Skills */
+
+/*Gallery*/
+.gallery .container h2{
+    text-align: center;
+}
+.gallery .container .image-box{
+    text-align: center;
+    padding-bottom: 200px;
+    cursor: pointer;
+}
+
+.popup-overlay{
+    position: fixed;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0,.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.popup-box{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1001;
+}
+.popup-box img{
+    max-width: 100%;
+}
+.popup-box h3{
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 20px;
+    color: var(--main-color);
+}
+
+.popup-box .close-button{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: var(--main-color);
+    padding: 15px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*Gallery*/
