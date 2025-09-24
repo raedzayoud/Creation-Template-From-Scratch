@@ -443,3 +443,47 @@ left: -35px;
 
 
 /* timline */
+
+/* feature */
+.feature{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.feature h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 60px;
+    text-align: center;
+}
+
+.feature .feat-box{
+    width: calc(100%/3);
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature .feat-box img{
+height: 200px;
+width: 200px;
+}
+
+.feature .feat-box h4{
+    font-size: 22px;
+    margin: 15px 0 40px;
+    position: relative;
+}
+
+.feature .feat-box h4::before{
+    content: '';
+    width: 70px;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -22px;
+}
+/* feature */
