@@ -439,9 +439,6 @@ left: -35px;
 .clearfix{
     clear: both;
 }
-
-
-
 /* timline */
 
 /* feature */
@@ -487,3 +484,123 @@ width: 200px;
     bottom: -22px;
 }
 /* feature */
+
+/* testimoials */
+.testimoials{
+    min-height: 250px;
+    position: relative;
+}
+.testimoials h2{
+    padding: 10px;
+    font-weight: bold;
+    font-size:25px;
+    color: #FFF;
+    margin: 0 0 30px;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.testimoials .ts-box img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.testimoials .ts-box > p{
+    margin:  0 0 20px;
+    line-height: 1.5;
+    color: #707070;
+    font-style: italic;
+    padding: 10px;
+}
+
+.testimoials .ts-box  p{
+    color: #707070;
+}
+
+.testimoials .ts-box p{
+font-size: 15px;
+}
+.testimoials .ts-box .person-info{
+margin-left: 20px;
+}
+
+.testimoials::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 100%;
+
+}
+.testimoials::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    top:0 ;
+    right: 0;
+    background-color: #333;
+    height: 100%;
+}
+
+.testimoials .ts-box{
+    position: relative;
+    z-index: 2;
+    width: calc(98%/3);
+    background-color: #FFF;
+    font-size: 22px;
+    float: left;
+}
+
+.testimoials .ts-box:not(:last-of-type){
+    margin-right: 1%;
+}
+
+
+/* testimoials */
+
+
+/* bullets */
+.nav-bullets{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 1000;
+
+}
+.nav-bullets .bullet{
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    margin: 10px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.nav-bullets .bullet .tooltip{
+    background-color: var(--main-color);
+    width: 120px;
+    color: #FFF;
+    padding: 4px 10px;
+    position: absolute;
+    right: 28px;
+    top:-6px;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+.nav-bullets .bullet:hover .tooltip{
+    display: block;
+}
+
+/* bullets */
