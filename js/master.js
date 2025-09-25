@@ -145,10 +145,21 @@ document.addEventListener("click", function (e) {
 // select all Bullets
 
 const allBullets = document.querySelectorAll(".nav-bullets .bullet");
-allBullets.forEach((bullet) => {
-  bullet.addEventListener("click", (e) => {
-    document.querySelector(e.target.dataset.section).scrollIntoView({
-      behavior: "smooth",
+
+// Select all Links
+
+const allLinks = document.querySelectorAll(".links a");
+
+function goToSomeneWhere(element) {
+  element.forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector(e.target.dataset.section).scrollIntoView({
+        behavior: "smooth",
+      });
     });
   });
-});
+}
+
+goToSomeneWhere(allBullets);
+goToSomeneWhere(allLinks);

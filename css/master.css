@@ -96,6 +96,7 @@ body {
     min-height: 100vh;
     transition: 0.3s;
     background-color: white;
+    border: 1px solid #707070;
 }
 .setting-box .toggle-settings{
     position: absolute;
