@@ -38,11 +38,7 @@ colorLi.forEach((li) => {
     );
     localStorage.setItem("color-option", e.target.dataset.color);
 
-    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
-      element.classList.remove("active");
-    });
-
-    e.target.classList.add("active");
+    HandleActive(e);
   });
 });
 
@@ -52,10 +48,7 @@ let backgroundInterval;
 const randomBackEl = document.querySelectorAll(".option-box .random span");
 randomBackEl.forEach((span) => {
   span.addEventListener("click", (e) => {
-    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
-      element.classList.remove("active");
-    });
-    e.target.classList.add("active");
+    HandleActive(e);
 
     if (e.target.dataset.background === "yes") {
       backgroundImage = true;
@@ -66,6 +59,13 @@ randomBackEl.forEach((span) => {
     }
   });
 });
+
+function HandleActive(e) {
+  e.target.parentElement.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  e.target.classList.add("active");
+}
 
 function randomiseImgs() {
   // landing page background
@@ -163,3 +163,40 @@ function goToSomeneWhere(element) {
 
 goToSomeneWhere(allBullets);
 goToSomeneWhere(allLinks);
+
+let bulletsSpan = document.querySelectorAll(".bullets-option span");
+
+let butlletnav = document.querySelector(".nav-bullets");
+
+let bulletLocalItem = localStorage.getItem("bullets_options");
+
+if (bulletLocalItem !== null) {
+  bulletsSpan.forEach((span) => {
+    span.classList.remove("active");
+  });
+  if (bulletLocalItem === "block") {
+    butlletnav.style.display = "block";
+    document.querySelector(".bullets-option .yes").classList.add("active");
+  } else {
+    butlletnav.style.display = "none";
+    document.querySelector(".bullets-option .no").classList.add("active");
+  }
+}
+
+bulletsSpan.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    if (e.target.dataset.display === "show") {
+      butlletnav.style.display = "block";
+      localStorage.setItem("bullets_options", "block");
+    } else {
+      butlletnav.style.display = "none";
+      localStorage.setItem("bullets_options", "none");
+    }
+    HandleActive(e);
+  });
+});
+
+document.querySelector(".setting-box .reset-option").onclick = function () {
+  localStorage.clear();
+  window.location.reload();
+};

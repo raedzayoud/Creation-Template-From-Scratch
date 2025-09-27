@@ -199,6 +199,46 @@ margin-top: 15px;
 }
 
 
+/***************/
+
+.option-box .bullets-option{
+    text-align: center;
+}
+
+
+.option-box .bullets-option .yes,
+.option-box .bullets-option .no{
+    color: #FFF;
+    margin-top: 10px;
+    background-color: #333;
+    width: 50px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: 0.5;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.option-box .bullets-option span.active{
+    opacity: 1;
+}
+
+.setting-box .reset-option{
+    background-color: #F44336;
+    border: none;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 /*
 Start About us
 */
@@ -605,3 +645,90 @@ margin-left: 20px;
 }
 
 /* bullets */
+
+/* contact */
+.contact{
+    min-height: 600px;
+    background-image: url(../imgs/map.jpg);
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+.contact .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.contact .container{
+    z-index: 2;
+    position: relative;
+}
+
+.contact h2{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: var(--main-color);
+    margin:  0 0 60px;
+
+}
+
+.contact form{
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+}
+.contact form .left{
+    float: left;
+    width: 49%;
+}
+
+.contact form .right{
+    float: right;
+    width: 49%;
+}
+
+.contact form input{
+    height: 40px;
+}
+
+.contact form textarea{
+    height: 150px
+}
+
+.contact form input:not([type="submit"]),
+.contact form textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    background-color: rgba(218, 218, 218, 0.19);
+}
+
+.contact form input:not([type="submit"]):focus,
+.contact form textarea:focus {
+    outline: none; /* remove default browser outline */
+    border: 1px solid var(--main-color); /* add custom border */
+}
+.contact form input[type="submit"]{
+    padding: 10px;
+    width: 100%;
+    background-color: var(--main-color);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.contact form textarea:focus::-webkit-input-placeholder,
+.contact form input:not([type="submit"]):focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: .3s;
+}
+
+/* contact */
+
