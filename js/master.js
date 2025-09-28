@@ -200,3 +200,26 @@ document.querySelector(".setting-box .reset-option").onclick = function () {
   localStorage.clear();
   window.location.reload();
 };
+
+// toggle-menu
+
+let toggleBtn = document.querySelector(".toggle-menu");
+let links = document.querySelector(".links");
+toggleBtn.onclick = function (e) {
+  e.stopPropagation();
+  this.classList.toggle("menu-active");
+  links.classList.toggle("open");
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target !== toggleBtn && e.target !== links) {
+    if (links.classList.contains("open")) {
+      toggleBtn.classList.toggle("menu-active");
+      links.classList.toggle("open");
+    }
+  }
+});
+
+links.onclick = function (e) {
+  e.stopPropagation();
+};
