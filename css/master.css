@@ -709,6 +709,13 @@ margin-left: 20px;
     float: left;
 }
 
+@media (max-width: 767px) {
+    .testimoials .ts-box {
+        float: none;
+        width: 100%;
+    }
+}
+
 .testimoials .ts-box:not(:last-of-type){
     margin-right: 1%;
 }
@@ -842,6 +849,15 @@ margin-left: 20px;
 }
 
 /* contact */
+
+/* footer */
+.footer{
+    padding: 20px;
+    background-color: black;
+    color: #FFF;
+    text-align: center;
+}
+/* footer */
 
 /* start Grid System */
 @media (min-width:576px){  /* smallDevice=>phone */
